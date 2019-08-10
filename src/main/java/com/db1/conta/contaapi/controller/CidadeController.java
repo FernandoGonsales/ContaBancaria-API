@@ -26,32 +26,38 @@ public class CidadeController {
 	@Autowired
 	private CidadeService cidadeService;
 	
+	//LISTAR TODAS CIDADES
 	@GetMapping("/todas-cidades")
 	public List<CidadeResponseDTO> todasCidades() {
 		return cidadeService.findAll();
 	}
 	
+	//BUSCAR CIDADE POR NOME
 	@GetMapping()
 	public CidadeResponseDTO cidadePorNome(@RequestParam("nome") String nome) {
 		return cidadeService.findByNameJava8(nome);
 	}
 	
+	//BUSCAR CIDADE POR ID
 	@GetMapping("/{id}")
 	public CidadeResponseDTO cidadePorId(@PathVariable("id") Long id) {
 		return cidadeService.findById(id);
 	}
 	
+	//SALVAR NOVA CIDADE
 	@PostMapping
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public CidadeResponseDTO salvar(@RequestBody CidadePersistDTO body) {
 		return cidadeService.save(body);
 	}
 	
+	//DELETAR CIDADE POR ID
 	@DeleteMapping("/{id}")
 	public void deletarPorId(@PathVariable("id") Long id) {
 		cidadeService.delete(id);
 	}
 	
+	//MODIFICAR CIDADE POR ID
 	@PutMapping("/{id}") 
 	public CidadeResponseDTO alterar(@PathVariable Long id, @RequestBody CidadePersistDTO body) {
 		return cidadeService.update(id, body);

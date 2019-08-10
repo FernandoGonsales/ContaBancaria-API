@@ -39,6 +39,19 @@ public class Agencia {
 		this.digito = digito;
 		this.cidade = cidade;
 	}
+	
+	public void alterar(String numero, String digito, Cidade cidade) {
+		this.validateAgencia(numero, digito, cidade);
+		this.numero = numero;
+		this.digito = digito;
+		this.cidade = cidade;
+	}
+	
+	public void validateAgencia(String numero, String digito, Cidade cidade) {
+		Assert.hasText(numero, "Numero é obrigatorio");
+		Assert.hasText(digito, "Digito é obrigatorio");
+		Assert.notNull(cidade, "Cidade é obrigatorio");	
+	}
 
 	public Long getId() {
 		return id;

@@ -44,7 +44,7 @@ public class Cidade {
 	}
 	
 	private void validateCidade(String nome, Estado estado) {
-		Assert.hasText(nome, "Nome ´obrigatório");
+		Assert.hasText(nome, "Nome é obrigatório");
 		Assert.notNull(estado, "Estado é obrigatório");
 	}
 	

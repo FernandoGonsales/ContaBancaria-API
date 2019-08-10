@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 import com.db1.conta.contaapi.domain.entity.Estado;
 
+//ENTRADA
 public class CidadePersistDTO implements Serializable{
 
 	private static final long serialVersionUID = 7041215295972851764L;
