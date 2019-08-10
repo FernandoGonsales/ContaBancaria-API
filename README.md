@@ -1,8 +1,8 @@
 # DB1 START Exercício JAVA IDE Eclipse
 
-## Conta API
+## Conta Bancária API
 
-Repositório com os exercicios em JAVA do DB1 Start
+Repositório com exercicios em JAVA do DB1 Start 2019 2° Edição
 
 Comando para clonar o repositório: git clone https://github.com/FernandoGonsales/ContaBancaria-API.git
 
